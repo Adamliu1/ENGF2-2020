@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\liu01\AppData\Local\Programs\Python\Python38\lib\tkinter\__init__.py", line 1883, in __call__
+    return self.func(*args)
+  File "c:\Users\liu01\OneDrive - University College London\UCLCS\ENGF0002\ENGF2-2020\assignments\assignment2\bomber_oo.py", line 356, in key
+    self.disp.restart()
+  File "c:\Users\liu01\OneDrive - University College London\UCLCS\ENGF0002\ENGF2-2020\assignments\assignment2\bomber_oo.py", line 300, in restart
+    self.canvas.delete(self.text)
+AttributeError: 'Display' object has no attribute 'text'
