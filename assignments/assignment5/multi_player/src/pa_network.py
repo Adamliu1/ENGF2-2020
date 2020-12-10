@@ -76,11 +76,19 @@ class Network():
 
     def send(self, msg):
         send_bytes = pickle.dumps(msg)
+
+        # debug
+        #print("maze list after pickle",send_bytes)
+
         lenbytes = len(send_bytes).to_bytes(2, byteorder='big')
         self.__sock.send(lenbytes + send_bytes)
 
     def send_maze(self, maze):
         msg = ["maze", maze]
+
+        # debug
+        print("maze list before encode",msg)
+
         self.send(msg)
 
     def check_for_messages(self, now):
@@ -95,6 +103,10 @@ class Network():
                 sys.exit()
             self.__recv_buf += recv_bytes  # concat onto whatever is left from prev receive
             recv_len = int.from_bytes(self.__recv_buf[0:2], byteorder='big')
+           
+            #debug
+            #print("receive len in check for message method: ",recv_len)
+
             while (len(self.__recv_buf) - 2 >= recv_len):
                 self.parse_msg(self.__recv_buf[2:recv_len+2])
                 self.__recv_buf = self.__recv_buf[recv_len+2:]

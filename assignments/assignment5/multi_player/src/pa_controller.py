@@ -169,6 +169,8 @@ class Controller():
         return self.score, self.remote_score
 
     def send_maze(self, maze):
+        #debug
+        print(maze.walls)
         self.net.send_maze(maze)
 
     def update_maze(self, maze, screen):
