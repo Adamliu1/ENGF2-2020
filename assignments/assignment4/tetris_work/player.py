@@ -1747,8 +1747,8 @@ class Adam_5(Player):
 #SelectedPlayer = Adam_1
 #SelectedPlayer = Adam_2
 #SelectedPlayer = Adam_3
-#SelectedPlayer = Adam_4
-SelectedPlayer = Adam_5
+SelectedPlayer = Adam_4
+#SelectedPlayer = Adam_5
 
 
 
